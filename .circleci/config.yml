@@ -66,6 +66,9 @@ jobs:
       - run:
           name: run system test
           command: bundle exec rails test:system
+      - run:
+          name: rubocop
+          command: bundle exec rubocop
 
       # collect reports
       - store_test_results:
